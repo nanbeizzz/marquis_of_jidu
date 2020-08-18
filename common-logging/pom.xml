@@ -11,7 +11,26 @@
     <artifactId>common-logging</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>log4j2-api</module>
+        <module>common-logging-log4j2-api</module>
+        <module>common-logging-log4j2-springboot</module>
+        <module>common-logging-slf4j</module>
+        <module>common-logging-logback-springboot</module>
     </modules>
+
+    <properties>
+        <spring-boot.version>2.1.1.RELEASE</spring-boot.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>

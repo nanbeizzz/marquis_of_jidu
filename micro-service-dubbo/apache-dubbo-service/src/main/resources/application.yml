@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+
+dubbo:
+  application:
+    name: apache-dubbo-service
+  registry:
+    address: zookeeper://49.235.215.147:2181
+    port: -1
